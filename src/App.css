@@ -1,24 +1,8 @@
-.App {
-  text-align: center;
+.post.active {
+  background-color: rgba(255, 0, 0, 0.4);
+  border: solid 1px #f00;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.post {
+  background: rgba(0, 0, 0, 0.12);
 }

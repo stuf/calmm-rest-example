@@ -5,6 +5,12 @@ import './App.css';
 
 //
 
+const store = U.atom({});
+
+const activePostIn = U.view('activePost');
+
+//
+
 const request = url => fromPromise(fetch(url));
 const json = response => fromPromise(response.json());
 
@@ -18,8 +24,19 @@ const postCount = posts.map(x => x.length);
 
 //
 
+const Post = ({ post, activePost }) =>
+  <article key={post.id}
+           onClick={() => activePost.set(post.id)}
+           className={U.cns('post',
+                            U.ift(U.equals(activePost, post.id), 'active'))}>
+    <h3>{post.title}</h3>
+    <p>{post.body}</p>
+
+    <hr />
+  </article>;
+
 const App = () =>
-  <section>
+  <section className="app">
     <header>
       <h1>Showing {postCount} posts</h1>
     </header>
@@ -27,12 +44,7 @@ const App = () =>
     <div>
       {U.seq(posts,
               U.map(post =>
-                <article key={post.id}>
-                  <h3>{post.title}</h3>
-                  <p>{post.body}</p>
-
-                  <hr />
-                </article>))}
+                <Post post={post} activePost={activePostIn(store)} />))}
     </div>
   </section>;
 
