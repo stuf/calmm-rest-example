@@ -2884,6 +2884,10 @@ indexof@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
 
+infestines@^0.4.2, infestines@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/infestines/-/infestines-0.4.4.tgz#a5be26a97396d87d55272097477e11122db4cb9a"
+
 inflight@^1.0.4:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/inflight/-/inflight-1.0.6.tgz#49bd6331d7d02d0c09bc910a1075ba8165b56df9"
@@ -3588,6 +3592,45 @@ jsx-ast-utils@^1.3.4, jsx-ast-utils@^1.4.0:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-1.4.1.tgz#3867213e8dd79bf1e8f2300c0cfc1efb182c0df1"
 
+karet.util@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/karet.util/-/karet.util-0.13.0.tgz#bd31f4b0640c452150155fa4975c47521cd565b6"
+  dependencies:
+    infestines "^0.4.4"
+    karet "^1.0.0"
+    kefir.atom "^5.3.0"
+    kefir.combines "^4.0.0"
+    partial.lenses "^11.0.0"
+    prop-types "^15.5.6"
+    ramda "^0.24.0"
+
+karet@^1.0.0, karet@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/karet/-/karet-1.2.2.tgz#455805a643ae11c95b994e2f37e6d2fc3259751d"
+  dependencies:
+    infestines "^0.4.4"
+    react "^15.0.1"
+
+kefir.atom@^5.3.0:
+  version "5.3.4"
+  resolved "https://registry.yarnpkg.com/kefir.atom/-/kefir.atom-5.3.4.tgz#c549fe569b57d310aa89ac86abb246bfcc417fcf"
+  dependencies:
+    infestines "^0.4.4"
+    kefir "^3.3.0"
+    partial.lenses ">=2.2.0"
+
+kefir.combines@^4.0.0:
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/kefir.combines/-/kefir.combines-4.1.4.tgz#a1d6792db1fb77f98b5f2070606506409a77fa9a"
+  dependencies:
+    infestines "^0.4.4"
+
+kefir@^3.3.0, kefir@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/kefir/-/kefir-3.7.2.tgz#fb713ecc0b24d741964e0b3e308026fae5c0806d"
+  dependencies:
+    symbol-observable "1.0.4"
+
 kind-of@^3.0.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
@@ -4245,6 +4288,12 @@ parseurl@~1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.1.tgz#c8ab8c9223ba34888aa64a297b28853bec18da56"
 
+partial.lenses@>=2.2.0, partial.lenses@^11.0.0, partial.lenses@^11.9.0:
+  version "11.9.0"
+  resolved "https://registry.yarnpkg.com/partial.lenses/-/partial.lenses-11.9.0.tgz#c04e667d37ab274dbbe241e4409821495d3ba7a0"
+  dependencies:
+    infestines "^0.4.2"
+
 path-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/path-browserify/-/path-browserify-0.0.0.tgz#a0b870729aae214005b7d5032ec2cbbb0fb4451a"
@@ -4671,19 +4720,13 @@ progress@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/progress/-/progress-1.1.8.tgz#e260c78f6161cdd9b0e56cc3e0a85de17c7a57be"
 
-promise@7.1.1:
+promise@7.1.1, promise@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/promise/-/promise-7.1.1.tgz#489654c692616b8aa55b0724fa809bb7db49c5bf"
   dependencies:
     asap "~2.0.3"
 
-promise@^7.1.1:
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
-  dependencies:
-    asap "~2.0.3"
-
-prop-types@^15.5.10:
+prop-types@^15.5.10, prop-types@^15.5.6:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -4754,6 +4797,10 @@ querystringify@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-1.0.0.tgz#6286242112c5b712fa654e526652bf6a13ff05cb"
 
+ramda@^0.24.0, ramda@^0.24.1:
+  version "0.24.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.24.1.tgz#c3b7755197f35b8dc3502228262c4c91ddb6b857"
+
 randomatic@^1.1.3:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-1.1.7.tgz#c7abe9cc8b87c0baa876b19fde83fd464797e38c"
@@ -4802,7 +4849,7 @@ react-dev-utils@^3.0.0:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@15.6.1:
+react-dom@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.1.tgz#2cb0ed4191038e53c209eb3a79a23e2a4cf99470"
   dependencies:
@@ -4865,7 +4912,7 @@ react-scripts@1.0.7:
   optionalDependencies:
     fsevents "1.0.17"
 
-react@15.6.1:
+react@^15.0.1, react@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
   dependencies:
@@ -5598,6 +5645,10 @@ sw-toolbox@^3.4.0:
   dependencies:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
+
+symbol-observable@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
 
 symbol-tree@^3.2.1:
   version "3.2.2"

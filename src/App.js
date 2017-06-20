@@ -1,21 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'karet';
+import * as U from 'karet.util';
+import { fromPromise, constant } from 'kefir';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+//
+
+const request = url => fromPromise(fetch(url));
+const json = response => fromPromise(response.json());
+
+const posts =
+  U.seq(constant('https://jsonplaceholder.typicode.com/posts'),
+        U.flatMapLatest(request),
+        U.flatMapLatest(json));
+
+// const postCount = U.length(posts);
+const postCount = posts.map(x => x.length);
+
+//
+
+const App = () =>
+  <section>
+    <header>
+      <h1>Showing {postCount} posts</h1>
+    </header>
+
+    <div>
+      {U.seq(posts,
+              U.map(post =>
+                <article key={post.id}>
+                  <h3>{post.title}</h3>
+                  <p>{post.body}</p>
+
+                  <hr />
+                </article>))}
+    </div>
+  </section>;
 
 export default App;
